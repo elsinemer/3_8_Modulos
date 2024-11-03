@@ -1,0 +1,10 @@
+# programa_principal.py
+
+from modulo_formato import negrita, italica, subrayado, tachado, combinar_formato
+
+texto = "Ejemplo"
+
+print("Negrita:", negrita(texto))
+print("Itálica:", italica(texto))
+print("Subrayado:", subrayado(texto))
+print("Tachado:", tachado(texto))
