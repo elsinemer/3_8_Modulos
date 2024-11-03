@@ -1,0 +1,7 @@
+import random
+
+# Desafío 0: Generar un número aleatorio entre 1 y 100
+numero_aleatorio = random.randint(1, 100)
+
+# Imprimir el número aleatorio generado
+print(f"El número aleatorio generado es: {numero_aleatorio}")
