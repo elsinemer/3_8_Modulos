@@ -1,0 +1,24 @@
+from datetime import datetime
+
+def calcular_diferencia_fechas(fecha1_str, fecha2_str):
+    formato_fecha = "%Y-%m-%d"  # Formato de fecha: Año-Mes-Día
+    
+    try:
+        # Convertir las cadenas de texto a objetos datetime
+        fecha1 = datetime.strptime(fecha1_str, formato_fecha)
+        fecha2 = datetime.strptime(fecha2_str, formato_fecha)
+        
+        # Calcular la diferencia entre las fechas
+        diferencia = abs(fecha2 - fecha1)
+        
+        # Mostrar el resultado
+        print(f"La diferencia entre {fecha1_str} y {fecha2_str} es de {diferencia.days} días.")
+    except ValueError:
+        print("Error: Por favor, ingrese las fechas en el formato correcto (YYYY-MM-DD).")
+
+# Solicitar al usuario que ingrese las fechas
+fecha1 = input("Ingrese la primera fecha (YYYY-MM-DD): ")
+fecha2 = input("Ingrese la segunda fecha (YYYY-MM-DD): ")
+
+# Llamar a la función para calcular la diferencia
+calcular_diferencia_fechas(fecha1, fecha2)
