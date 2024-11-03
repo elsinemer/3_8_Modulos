@@ -1,0 +1,13 @@
+
+# Desafío 1: Utilizar funciones del módulo string
+# 1. string.ascii_letters: Devuelve todas las letras mayúsculas y minúsculas
+letras = string.ascii_letters
+print(f"Todas las letras (mayúsculas y minúsculas): {letras}")
+
+# 2. string.digits: Devuelve todos los dígitos del 0 al 9
+digitos = string.digits
+print(f"Dígitos: {digitos}")
+
+# 3. string.punctuation: Devuelve todos los caracteres de puntuación
+puntuacion = string.punctuation
+print(f"Puntuación: {puntuacion}")
