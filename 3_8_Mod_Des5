@@ -1,0 +1,43 @@
+import os
+
+def mostrar_menu():
+    print("\nProcesador de Texto")
+    print("1. Leer un archivo")
+    print("2. Guardar un archivo")
+    print("3. Salir")
+
+def leer_archivo():
+    nombre_archivo = input("Ingrese el nombre del archivo a leer (con extensión): ")
+    if os.path.exists(nombre_archivo):
+        with open(nombre_archivo, 'r', encoding='utf-8') as archivo:
+            contenido = archivo.read()
+            print("\nContenido del archivo:")
+            print(contenido)
+    else:
+        print("El archivo no existe.")
+
+def guardar_archivo():
+    nombre_archivo = input("Ingrese el nombre del archivo a guardar (con extensión): ")
+    contenido = input("Ingrese el contenido que desea guardar: \n")
+    
+    with open(nombre_archivo, 'w', encoding='utf-8') as archivo:
+        archivo.write(contenido)
+    print(f"El archivo '{nombre_archivo}' se ha guardado correctamente.")
+
+def main():
+    while True:
+        mostrar_menu()
+        opcion = input("Seleccione una opción: ")
+        
+        if opcion == '1':
+            leer_archivo()
+        elif opcion == '2':
+            guardar_archivo()
+        elif opcion == '3':
+            print("Saliendo del procesador de texto.")
+            break
+        else:
+            print("Opción no válida. Intente de nuevo.")
+
+if __name__ == "__main__":
+    main()
