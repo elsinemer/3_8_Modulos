@@ -1,0 +1,12 @@
+import random
+
+# Desafío 2: Generar una contraseña aleatoria de 8 caracteres
+
+def generar_contrasena(longitud=8):
+    caracteres = string.ascii_letters + string.digits
+    contrasena = ''.join(random.choice(caracteres) for _ in range(longitud))
+    return contrasena
+
+# Generar y mostrar la contraseña aleatoria
+contrasena = generar_contrasena()
+print(f"Contraseña aleatoria generada: {contrasena}")
